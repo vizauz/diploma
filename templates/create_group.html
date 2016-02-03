@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-6 col-md-push-3">
+			<form action="/create_group" method="POST">
+				{{ form.hidden_tag() }}
+				
+				<div class="form-group">
+					{{ form.username.label }}
+					{{ form.username(class_='form-control') }}
+				</div>
+
+				<div class="form-group">
+					{{ form.email.label }}
+					{{ form.email(class_='form-control') }}
+				</div>
+				
+				<div>
+					{{ form.submit(class_='btn btn-lg btn-primary', id='add-user-btn') }}
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+{% endblock %}
